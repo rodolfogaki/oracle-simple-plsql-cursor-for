@@ -20,9 +20,9 @@ DECLARE
 BEGIN
     for reg_pessoa_ativa in (
         select *
-            from pessoa p
-        where 1=1
-            and p.status = 'A'
+          from pessoa p
+         where 1=1
+           and p.status = 'A'
 
     ) loop
         dbms_output.put_line(reg_pessoa_ativa.nome_completo||' - '||reg_pessoa_ativa.email);
